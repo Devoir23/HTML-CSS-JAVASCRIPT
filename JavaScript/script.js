@@ -24,13 +24,10 @@
 
 
 let num = [10,20,30,40];
-console.log(num);
 
-// for(let i=0;i<num.length;i++){
-//     console.log(num[i]);
-// }
 
-// alternative of for loop tp print elements 
-num.forEach((val,index,array) => {
-    console.log(val,index,array)
-});
+console.log(num.indexOf(30)); //indexof
+console.log(num.reverse());
+console.log(num.sort());
+
+
