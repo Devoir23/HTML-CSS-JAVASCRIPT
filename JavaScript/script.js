@@ -1,24 +1,12 @@
-// getElementByTagName()
-var a = document.getElementsByTagName('div')
-console.log(a);
+// Traversal DOM
 
+// Parent Element 
+var parent = document.querySelector('div')
+var p = parent.parentElement;
+console.log(p);
 
-// getElementByClassName()
-var b = document.getElementsByClassName('actor')
-console.log(b);
-
-
-// getElementById()
-var c = document.getElementById('names')
+// childrenElemt
+var child = document.querySelector('ul')
+var c = child.children;
 console.log(c);
 
-
-// querySelector()
-var d = document.querySelector('.actor')
-console.log(d);
-
-
-
-// querySelectorAll()
-var e = document.querySelectorAll('actor')
-console.log(e);
