@@ -32,7 +32,7 @@ console.log(num.sort());
 */
 
 
-// map function
+/* map function
 
 const num = [10,20,30,40,50,70,80,90];
 
@@ -41,4 +41,18 @@ const detailsMap = num.map((num,index)=>{
 }) 
 
 console.log(detailsMap);
-console.log(num);
+console.log(num); */
+
+// forEach
+const num = [10,20,30,40,50,70,80,90];
+
+num.forEach((num) => {
+    square = num * num
+    console.log(square)
+})
+
+let detailEach = num.forEach((num) => {
+    square = num * num
+    return square
+})
+console.log(detailEach) 
