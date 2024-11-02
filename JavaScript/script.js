@@ -18,3 +18,5 @@ const ul = document.querySelector('ul');
 const newElement = document.createElement('li');
 newElement.textContent = "Append child";
 ul.appendChild(newElement)
+
+document.getElementById('elementId');
