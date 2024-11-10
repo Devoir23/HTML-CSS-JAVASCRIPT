@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typing Speed Test</title>
+    <title>TypingSpeed Test App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <h1>Typing Speed Test</h1>
+        <!-- Text Area and Display Area -->
+        <div class="text-area">
+            <div class="text-display" id="textDisplay">
+                Click "Start" to begin typing!
+            </div>
+            <textarea id="textInput" placeholder="Start typing here..." disabled></textarea>
+
+        </div>
+        <div class="stats">
+            <!-- start button -->
+            <button id="startButton">Start</button>
+            <!-- Timer -->
+            <div class="timer">Time:<span id="timer"> 0</span> sec</div>
+            <!-- WPM -->
+             <div class="wpm">WPM:<span id="wpm"> 0</span>%</div>
+            <!-- Accuracy Calculation and errors -->
+            <div class="accuracy">Accuracy: <span id="accuracy">0</span>%</div>
+            <div class="errors">Errors: <span id="errors">0</span></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
