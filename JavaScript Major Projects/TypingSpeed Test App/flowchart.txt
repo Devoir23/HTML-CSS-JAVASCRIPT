@@ -1,0 +1,47 @@
+[Start]
+   |
+   v
+[Generate Random Text Passage]
+   |
+   v
+[Display Passage & Start Button]
+   |
+   v
+[User Presses Start Button]
+   |
+   v
+[Activate Timer and Display Passage for Typing]
+   |
+   v
+[User Types in Text Area]
+   |
+   v
+{Check Each Keystroke}
+   |
+   |--[Is the Typed Character Correct?]--Yes-->[Continue Typing]
+   |                          |
+   |                          No
+   |                          |
+   |                       [Highlight Mistake]
+   |
+   v
+[Has User Finished Typing Passage?]
+   |
+   |--No-->[Continue Typing]
+   |
+   |--Yes-->
+   |
+   v
+[Stop Timer]
+   |
+   v
+[Calculate WPM, Accuracy, and Errors]
+   |
+   v
+[Display Results: WPM, Accuracy, Errors, Typing Time]
+   |
+   v
+[Retry or Reset Option]
+   |
+   v
+[End]
