@@ -26,6 +26,8 @@ function startTest(){
     document.getElementById("textDisplay").textContent = currentText;
 
     // Reset variable and UI elements 
+    document.getElementById("inputBox").value = "";
+
     document.getElementById("wpm").textContent = "WPM: 0";
     document.getElementById("accuracy").textContent = "Accuracy: 0%";
     document.getElementById("errors").textContent = "Errors: 0";
@@ -35,4 +37,24 @@ function startTest(){
     startTime = new Date().getTime();
     timerInterval = setInterval(updateWPM, 1000);
 }
+
+// update WPM ad the user types (dynamic)
+function updateWPM(){
+    const elapsedTime = (new Date().getTime() - startTime) / 1000 / 60; // minutes
+    const wordsTyped = typedText.trim().split(/\s+/)/length;
+    const wpm = Math.round(wordsTyped / elapsedTime);
+    document.getElementById("wpm").textContent = "WPM: " + wpm;
+}
+
+// funtion to handle user input 
+function onInputChange(){
+    const inputBox = document.getElementById("inputBox");
+    typedText = inputBox.value;
+
+    //check if the input matches the passage text
+    if (typedText === currentText){
+        endTest();
+    }
+}
+
 
