@@ -1,20 +1,22 @@
-import React from 'react';
-import ContactCard from './ContactCard';
+import React from "react";
+import ContactCard from "./ContactCard";
 
-function ContactList({ contacts }) {
-  return (
-    <div>
-      {/* Map through the contacts array and pass each contact as props */}
-      {contacts.map(contact => (
-        <ContactCard 
-          key={contact.id} // Unique key for React rendering
-          name={contact.name}
-          email={contact.email}
-          phone={contact.phone}
-        />
-      ))}
-    </div>
-  );
+function ContactList({ contacts }){
+    return(
+        <div>
+            {
+                // callback function - Arrow function - single parameter
+                contacts.map(contact =>(
+                    <ContactCard
+                        key={contact.id}
+                        name={contact.name}
+                        phone={contact.phone}
+                        email={contact.email}
+                    />
+                ))
+            }
+        </div>
+    );
 }
 
 export default ContactList;
