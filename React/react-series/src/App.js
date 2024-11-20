@@ -1,16 +1,22 @@
-// Component
-// import { Fragment } from "react";
-import './App.css';
+import React, {useState} from 'react'
 
-function App(){
-    let a =2;
-    return(
-        <div className="hero">
-        <h1 style={{color: 'red'}}>Component and jsx</h1> {/*jsx*/}
-        <p>{a}</p>
-        </div>
-        
-    )
+export const App = () => {
+    // Declare a state variable `count` with an initial value of 0
+    const [count, setCount] = useState(0);
+    
+    const increment = () => {
+        setCount(count + 1);
+    }
+    const decrement = () => {
+        setCount(count - 1)
+    }
+  return (
+    <div>
+        <h3>Counter: {count}</h3>
+        <button onClick={increment}> +</button>
+        <button onClick={decrement}> -</button>
+    </div>
+  )
 }
 
 export default App;
