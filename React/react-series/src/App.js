@@ -1,22 +1,46 @@
-import React, {useState} from 'react'
+// Learning about Multiple State
+import React, { useState } from 'react'
 
-export const App = () => {
-    // Declare a state variable `count` with an initial value of 0
-    const [count, setCount] = useState(0);
-    
-    const increment = () => {
-        setCount(count + 1);
-    }
-    const decrement = () => {
-        setCount(count - 1)
-    }
+function UserProfile() {
+  // declare multiple state variables
+  const [name, setName] = useState("");
+  const [age, setAge] = useState(0);
+
+  // handler to reset 
+  const resetProfile = () => {
+    setName("");
+    setAge(0);
+  };
+
   return (
     <div>
-        <h3>Counter: {count}</h3>
-        <button onClick={increment}> +</button>
-        <button onClick={decrement}> -</button>
+      <h1>User Profile</h1>
+      <div>
+        <label>Name: </label>
+        <input
+          type='text'
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder='Enter Your Name'
+        />
+      </div>
+      <div>
+      <label>Age: </label>
+        <input 
+          type="number" 
+          value={age} 
+          onChange={(e) => setAge(Number(e.target.value))} 
+          placeholder="Enter your age" 
+        />
+      </div>
+      <p>
+        <strong>Name:</strong> {name} <br />
+        <strong>Age:</strong> {age} <br />
+      </p>
+      <button onClick={resetProfile}>Reset Profile</button>
     </div>
-  )
+  );
 }
 
-export default App;
+
+export default UserProfile;
