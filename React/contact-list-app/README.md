@@ -14,11 +14,12 @@ A beginner-friendly React project to understand ```props``` by building a dynami
 ---
 
 ## 📂 Project Structure
-/src├── App.js # Main parent component 
-    ├── ContactList.js # Child component rendering the list of contacts 
-    ├── ContactCard.js # Child component for individual contact display 
-    ├── index.css # Styles for the application 
-    ├── index.js # Entry point of the React app
+/src<br>
+├── App.js # Main parent component <br>
+    ├── ContactList.js # Child component rendering the list of contacts <br>
+    ├── ContactCard.js # Child component for individual contact display <br>
+    ├── index.css # Styles for the application <br>
+    ├── index.js # Entry point of the React app <br>
 
 
 ---
