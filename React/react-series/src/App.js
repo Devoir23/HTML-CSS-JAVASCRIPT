@@ -1,36 +1,26 @@
-// cleanup or API subscription 
+// Timer 
 import React, { useState, useEffect } from 'react';
 
-function FakeChatApp() {
-  const [messages, setMessages] = useState([]);
+function Timer() {
+  const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
-    const fetchMessages = () => {
-      setMessages((prevMessages) => [
-        ...prevMessages,
-        `New message at ${new Date().toLocaleTimeString()}`,
-      ]);
-    };
+    const timer = setInterval(() => {
+      setSeconds((prev) => prev + 1);
+    }, 1000);
 
-    // Simulating a message subscription
-    const interval = setInterval(fetchMessages, 10000);
-
-    // Cleanup function to unsubscribe from the "chat server"
+    // Cleanup to stop the timer when the component unmounts
     return () => {
-      clearInterval(interval);
+      clearInterval(timer);
     };
   }, []); // Empty dependency array ensures it runs once on mount
 
   return (
     <div>
-      <h1>Chat Messages</h1>
-      <ul>
-        {messages.map((msg, index) => (
-          <li key={index}>{msg}</li>
-        ))}
-      </ul>
+      <h1>Timer</h1>
+      <p>Elapsed time: {seconds} seconds</p>
     </div>
   );
 }
 
-export default FakeChatApp;
+export default Timer;
